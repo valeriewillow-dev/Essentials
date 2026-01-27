@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Maya ASCII.ma
-//Last modified: Tue, Jan 20, 2026 07:50:36 PM
+//Last modified: Tue, Jan 20, 2026 08:02:32 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires "mtoa" "5.5.4.2";
@@ -10,19 +10,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 20.0";
-fileInfo "UUID" "49A70A38-6345-A0B7-9508-FD8D32376E2F";
+fileInfo "UUID" "FF7BEB42-F444-E25A-FE3C-1DBCB090FE28";
 createNode transform -s -n "persp";
 	rename -uid "032B7B05-4342-B826-D7C4-DDA3E2063747";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.570529878196004 2.027978044569807 0.43254434849306644 ;
-	setAttr ".r" -type "double3" 156.28862652197233 -261.46466645850069 180.00000000000011 ;
+	setAttr ".t" -type "double3" 5.2922644986961718 1.3173117025363461 5.2506479643672517 ;
+	setAttr ".r" -type "double3" 176.6886265219467 -1305.4646664580278 180.00000000016476 ;
 	setAttr ".rp" -type "double3" 6.9388939039072284e-17 -1.1102230246251565e-16 4.4408920985006262e-16 ;
 	setAttr ".rpt" -type "double3" 7.9241796763950407e-15 5.0596957945110369e-15 -6.4705778953678887e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B102FE80-6648-A86C-B887-568220EDE75C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.8347115103047598;
+	setAttr ".coi" 7.431414684000492;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -93,6 +93,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
 createNode transform -n "pPlane1";
 	rename -uid "4D143B33-DE4D-CEC4-C568-3391E86D3BC0";
 	setAttr ".t" -type "double3" -0.59994294265486836 0 0 ;
@@ -132,6 +133,7 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".pt[66]" -type "float3" 3.7252903e-09 1.1920929e-07 -3.7252903e-09 ;
 	setAttr ".pt[67]" -type "float3" -7.4505806e-09 1.1920929e-07 -3.7252903e-09 ;
 	setAttr ".pt[68]" -type "float3" -7.4505806e-09 1.1920929e-07 -9.3132257e-09 ;
+	setAttr ".dr" 1;
 createNode transform -n "pCylinder1";
 	rename -uid "3BCF8976-9D4A-542D-50E7-BA92FE0EB121";
 	setAttr ".t" -type "double3" 0 0.83509644166268471 0 ;
@@ -188,6 +190,8 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr ".pt[57]" -type "float3" 0 0 -5.5879354e-09 ;
 	setAttr ".pt[59]" -type "float3" -1.8626451e-09 0 7.4505806e-09 ;
 	setAttr ".pt[60]" -type "float3" 3.7252903e-09 0 -9.3132257e-10 ;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "2C5177BE-5B4B-596C-8E34-2EAF47DA085A";
 	setAttr -s 2 ".lnk";
