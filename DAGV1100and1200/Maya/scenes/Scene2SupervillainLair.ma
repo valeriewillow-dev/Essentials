@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2SupervillainLair.ma
-//Last modified: Wed, Mar 25, 2026 03:51:46 PM
+//Last modified: Wed, Mar 25, 2026 09:25:25 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires "mtoa" "5.5.4.2";
@@ -10,23 +10,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 20.3.1";
-fileInfo "UUID" "FEAE557F-9D43-D5CD-8F2A-DA92A0496637";
+fileInfo "UUID" "856E7B1D-FC4B-072C-61A7-37A43535C209";
 createNode transform -s -n "persp";
 	rename -uid "106B060C-B04B-1B82-9B21-8DA0D80719E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 41.514258641348967 25.451858048303496 16.897811467926999 ;
-	setAttr ".r" -type "double3" -9.5152725003459668 54.850894961246553 -1.9888610241057182e-13 ;
-	setAttr ".rp" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 7.1054273576010019e-15 ;
-	setAttr ".rpt" -type "double3" -1.7298149525968766e-14 1.7369442249704238e-14 -3.971422828421627e-15 ;
+	setAttr ".t" -type "double3" 43.333246379201391 15.511168970546182 15.433615678825879 ;
+	setAttr ".r" -type "double3" 1.5385756372302517 57.338410714347063 2.6815204500261614e-13 ;
+	setAttr ".rp" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 0 ;
+	setAttr ".rpt" -type "double3" -2.224375369646491e-14 1.3511276518675157e-14 -5.3164802226566649e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "23673BBA-B649-2711-879D-CB9DA429BEA5";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 51.868229117668719;
+	setAttr ".coi" 49.113031682112826;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.3126414077131443 16.87749517104205 -12.552212731346394 ;
+	setAttr ".tp" -type "double3" 2.0012291641885582 16.829853060420884 -11.061955766553703 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D85B0425-624C-9276-63CA-3484E5D6773F";
