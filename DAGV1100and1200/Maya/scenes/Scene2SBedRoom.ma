@@ -1,11 +1,13 @@
 //Maya ASCII 2026 scene
 //Name: Scene2SBedRoom.ma
-//Last modified: Thu, Apr 02, 2026 02:25:22 PM
+//Last modified: Tue, Apr 07, 2026 08:51:45 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "KeyboardScene2" -rfn "KeyboardScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/KeyboardScene2.ma";
+file -rdi 1 -ns "Door1" -rfn "DoorRN" -op "v=0;" -typ "mayaAscii" "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/Door.ma";
 file -r -ns "KeyboardScene2" -dr 1 -rfn "KeyboardScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/KeyboardScene2.ma";
+file -r -ns "Door1" -dr 1 -rfn "DoorRN" -op "v=0;" -typ "mayaAscii" "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/Door.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
@@ -15,23 +17,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 20.3.1";
-fileInfo "UUID" "F372C797-F64D-96CF-F571-08A44EB0D65C";
+fileInfo "UUID" "63168E91-4B40-A4C0-A3AA-A195ED210F1C";
 createNode transform -s -n "persp";
 	rename -uid "106B060C-B04B-1B82-9B21-8DA0D80719E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.8026658529527304 8.5578661249307366 9.8324699397097888 ;
-	setAttr ".r" -type "double3" -26.713466332465089 -19.38133011858508 6.4060811118652852e-14 ;
-	setAttr ".rp" -type "double3" -8.8817841970012523e-16 8.8817841970012523e-16 0 ;
-	setAttr ".rpt" -type "double3" -4.6244868830704713e-13 -3.9003093219596351e-13 1.9666443057653581e-13 ;
+	setAttr ".t" -type "double3" 20.717950876845833 25.721622805732256 -25.358980436636003 ;
+	setAttr ".r" -type "double3" 141.39456511953176 29.401079597305412 180 ;
+	setAttr ".rp" -type "double3" -1.7763568394002505e-15 -2.2204460492503131e-16 7.1054273576010019e-15 ;
+	setAttr ".rpt" -type "double3" -4.5633978615701808e-13 -3.8529855950141354e-13 1.8793671578568844e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "23673BBA-B649-2711-879D-CB9DA429BEA5";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 10.492934034396143;
+	setAttr ".coi" 37.77101429112296;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 6.9131241134113122 3.8409884333685627 0.99065005334169065 ;
+	setAttr ".tp" -type "double3" 6.2276637004558584 2.1542576947314203 0.35600351923741158 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D85B0425-624C-9276-63CA-3484E5D6773F";
@@ -3978,20 +3980,20 @@ createNode camera -n "RenderCamShape" -p "RenderCam";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7F581A5D-CA42-27FE-EB68-7B925F31FA54";
-	setAttr -s 7 ".lnk";
-	setAttr -s 7 ".slnk";
+	rename -uid "77AC2620-7A4D-84DB-0A7E-8F8756EF9976";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5175E56A-C045-014C-A487-89B3CBA60603";
+	rename -uid "C1F436FE-1F43-AF3B-528C-348914DB3D5A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3FB4E10B-5A49-AA1F-CFB0-289671BD267B";
+	rename -uid "E62C7E73-714A-84C5-BB3C-D9B5C7555A25";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "6DF6A761-DB47-1D3D-9160-6BA44AE15A2C";
+	rename -uid "B0C0581B-E14D-5711-0836-23959EE2763F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7B729C8-5E41-A89B-91DD-C8B8DD1673BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "530A942A-AD4C-E7B1-7343-EDBF67B5339E";
+	rename -uid "9A701BD4-7943-CA5A-CA64-2E80F1BD6669";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "EC619BDF-B443-D7CF-3B53-308025E0E5F7";
 	setAttr ".g" yes;
@@ -4253,6 +4255,20 @@ createNode reference -n "KeyboardScene2RN";
 		2 "|KeyboardScene2:pCube2" "scalePivotTranslate" " -type \"double3\" 0 0.42880303618500859 -0.63011489907576079";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "DoorRN";
+	rename -uid "B782F67C-2743-C87F-4D3A-CD94B8D576AB";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"DoorRN"
+		"DoorRN" 0
+		"DoorRN" 6
+		2 "|Door1:pCube1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|Door1:pSphere1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|Door1:pSphere1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Door1:pCylinder1" "translate" " -type \"double3\" 0 0 0"
+		2 "|Door1:pCylinder1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|Door1:pCylinder1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4264,16 +4280,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 3;
 select -ne :renderPartition;
-	setAttr -s 7 ".st";
+	setAttr -s 9 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 7 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :defaultTextureList1;
+	setAttr -s 2 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -4281,6 +4299,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
