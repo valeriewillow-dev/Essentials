@@ -1,13 +1,17 @@
 //Maya ASCII 2026 scene
 //Name: Scene2SBedRoom.ma
-//Last modified: Tue, Apr 14, 2026 09:39:07 PM
+//Last modified: Tue, Apr 14, 2026 11:43:10 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "KeyboardScene2" -rfn "KeyboardScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/KeyboardScene2.ma";
 file -rdi 1 -ns "Door1" -rfn "DoorRN" -op "v=0;" -typ "mayaAscii" "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/Door.ma";
+file -rdi 1 -ns "DresserScene2" -rfn "DresserScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//scenes/DresserScene2.ma";
 file -r -ns "KeyboardScene2" -dr 1 -rfn "KeyboardScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/KeyboardScene2.ma";
 file -r -ns "Door1" -dr 1 -rfn "DoorRN" -op "v=0;" -typ "mayaAscii" "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//assets/Door.ma";
+file -r -ns "DresserScene2" -dr 1 -rfn "DresserScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/vwd/3d Modeling Class 2026 UVU/Essentials/DAGV1100and1200/Maya//scenes/DresserScene2.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
@@ -17,23 +21,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Mac OS X 20.3.1";
-fileInfo "UUID" "6875C1A6-F54B-0904-DDE8-E885E8C68639";
+fileInfo "UUID" "7864FD0C-034F-EDC5-2A6A-3B950AC5FAA1";
 createNode transform -s -n "persp";
 	rename -uid "106B060C-B04B-1B82-9B21-8DA0D80719E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 27.543581717307763 14.601275433946467 -6.3314751648371743 ;
-	setAttr ".r" -type "double3" 164.42341540613936 72.916861505975646 -179.99999999999997 ;
-	setAttr ".rp" -type "double3" 8.8817841970012523e-16 -4.4408920985006262e-15 -3.5527136788005009e-15 ;
-	setAttr ".rpt" -type "double3" -4.6366347556319918e-13 -3.8971056603123074e-13 2.0326558044356587e-13 ;
+	setAttr ".t" -type "double3" 33.649915219626166 22.670788739941013 -0.24395556736982435 ;
+	setAttr ".r" -type "double3" -21.103508662647865 86.936943165936412 -3.2737086300480473e-13 ;
+	setAttr ".rp" -type "double3" 4.4408920985006262e-16 -3.5527136788005009e-15 7.1054273576010019e-15 ;
+	setAttr ".rpt" -type "double3" -4.538825809553676e-13 -3.8531142190770753e-13 1.9296117040609708e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "23673BBA-B649-2711-879D-CB9DA429BEA5";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 42.119304657652528;
+	setAttr ".coi" 36.418676142241594;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -11.238708739064617 3.2911395843808027 5.5870230151407059 ;
+	setAttr ".tp" -type "double3" -0.27767387372028907 9.5581009276240998 -2.0594688841033078 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D85B0425-624C-9276-63CA-3484E5D6773F";
@@ -847,23 +851,6 @@ createNode transform -n "PersonRef";
 	setAttr ".spt" -type "double3" 0 -3.0693521225265061 0 ;
 createNode mesh -n "PersonRefShape" -p "PersonRef";
 	rename -uid "191FC9BF-3E47-F214-3F12-3D9FD29CFAE4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "Dresser";
-	rename -uid "6BED17C5-1D4B-3E41-F1BE-62A483835186";
-	setAttr ".t" -type "double3" -6.5650438974726955 1.4400509153572285 1.900248640507435 ;
-	setAttr ".s" -type "double3" 2.8690557508752614 3.7918477876896715 9.1031577124959018 ;
-	setAttr ".rp" -type "double3" 1.0895971964228897 -1.4400509153572327 3.4571564197540283 ;
-	setAttr ".sp" -type "double3" 0.500000021715719 -0.49999997833406168 0.4999999907461522 ;
-	setAttr ".spt" -type "double3" 0.58959717470717066 -0.94005093702317111 2.9571564290078762 ;
-createNode mesh -n "DresserShape" -p "Dresser";
-	rename -uid "7048EFD2-7442-CC82-D663-B6A776EE8C9F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -3882,20 +3869,20 @@ createNode camera -n "RenderCamShape" -p "RenderCam";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "451A8583-3B4B-38E4-E93C-88BD991E2CEC";
-	setAttr -s 9 ".lnk";
-	setAttr -s 9 ".slnk";
+	rename -uid "AE53C18B-6F40-4E26-A7F3-91927FE5AAE0";
+	setAttr -s 11 ".lnk";
+	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DB4D5AA4-1D46-FB28-2BCF-7B87922DF448";
+	rename -uid "70E61F02-EA4D-8143-03A6-7F8EC9AC1282";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FA6F8CB4-B54F-4636-9E72-618B2558F67F";
+	rename -uid "288AB95E-2A40-0EF3-C5F1-E38D44DFD7CB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F89D7D2D-2A40-2740-75A7-70980500BC7E";
+	rename -uid "58E669EC-C342-1230-4F11-8CBB063A84CF";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E7B729C8-5E41-A89B-91DD-C8B8DD1673BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "14DBC410-4C4D-8C90-9F30-CCAF884B0048";
+	rename -uid "49D61F96-4F46-FDAE-F822-8DB70BFCA5B3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "EC619BDF-B443-D7CF-3B53-308025E0E5F7";
 	setAttr ".g" yes;
@@ -4046,12 +4033,6 @@ createNode polyCube -n "polyCube7";
 	setAttr ".sh" 2;
 	setAttr ".sd" 2;
 	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube3";
-	rename -uid "7237D0E6-5B4A-13BC-58AE-E7B2BA179408";
-	setAttr ".sw" 2;
-	setAttr ".sh" 2;
-	setAttr ".sd" 2;
-	setAttr ".cuv" 4;
 createNode polyCylinder -n "polyCylinder1";
 	rename -uid "BC83B22D-5549-60C2-AC59-3B92E16C5608";
 	setAttr ".sc" 1;
@@ -4122,7 +4103,7 @@ createNode polyCube -n "polyCube13";
 createNode shadingEngine -n "lambert1SG";
 	rename -uid "5A1AB9BE-6846-0F38-99A2-8BBFCF8A072F";
 	setAttr ".ihi" 0;
-	setAttr -s 47 ".dsm";
+	setAttr -s 46 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "6D9DD780-4142-DAA9-579C-A19CD0A5193E";
@@ -4187,6 +4168,26 @@ createNode reference -n "sharedReferenceNode";
 	rename -uid "BACFA831-CC40-EF55-5AAA-7787DAA9488E";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
+createNode reference -n "DresserScene2RN";
+	rename -uid "13343780-DC44-8712-3BFB-2C92E8EB0663";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"DresserScene2RN"
+		"DresserScene2RN" 0
+		"DresserScene2RN" 7
+		2 "|DresserScene2:pCube1" "translate" " -type \"double3\" -5.90255643980456313 1.01553522141920971 1.4171095369268274"
+		
+		2 "|DresserScene2:pCube1" "rotate" " -type \"double3\" 0 90 0"
+		2 "|DresserScene2:pCube1" "scale" " -type \"double3\" 2.77865385414986843 2.77865385414986843 2.77865385414986843"
+		
+		2 "|DresserScene2:pCube1" "rotatePivot" " -type \"double3\" -3.14515781402588068 -1.01553522141921038 1.16669762134549737"
+		
+		2 "|DresserScene2:pCube1" "rotatePivotTranslate" " -type \"double3\" 4.3118554353714007 0 1.97846019268038043"
+		
+		2 "|DresserScene2:pCube1" "scalePivot" " -type \"double3\" -1.41913593429573837 -0.10445239319017663 0.52642907504517844"
+		
+		2 "|DresserScene2:pCube1" "scalePivotTranslate" " -type \"double3\" -1.72602187973014254 -0.91108282822903375 0.64026854630031904";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4198,18 +4199,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 3;
 select -ne :renderPartition;
-	setAttr -s 9 ".st";
+	setAttr -s 11 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 8 ".s";
+	setAttr -s 9 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 2 ".u";
+	setAttr -s 3 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 2 ".tx";
+	setAttr -s 3 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -4220,6 +4221,7 @@ select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -4241,7 +4243,6 @@ select -ne :hardwareRenderGlobals;
 connectAttr "transformGeometry2.og" "FloorShape.i";
 connectAttr "transformGeometry1.og" "WallShape1.i";
 connectAttr "polyCube2.out" "PersonRefShape.i";
-connectAttr "polyCube3.out" "DresserShape.i";
 connectAttr "polyCube4.out" "pCubeShape2.i";
 connectAttr "pasted__polyCube4.out" "|Bed|Bed|pasted__pCube2|pasted__pCubeShape2.i"
 		;
@@ -4336,7 +4337,6 @@ connectAttr "|Bed|Bed5|pasted__pCube2|pasted__pCubeShape2.iog" "lambert1SG.dsm"
 connectAttr "MouseShape.iog" "lambert1SG.dsm" -na;
 connectAttr "|Bed|Bed4|pasted__pCube2|pasted__pCubeShape2.iog" "lambert1SG.dsm" 
 		-na;
-connectAttr "DresserShape.iog" "lambert1SG.dsm" -na;
 connectAttr "BedShape7.iog" "lambert1SG.dsm" -na;
 connectAttr "ChairShape2.iog" "lambert1SG.dsm" -na;
 connectAttr "pCubeShape8.iog" "lambert1SG.dsm" -na;
